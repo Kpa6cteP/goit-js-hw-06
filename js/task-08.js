@@ -4,7 +4,7 @@ import users from "./users.js";
 
 const getUsersWithFriend = (users, friendName) => {
   return users
-    .filter((user) => user.friends.indexOf(friendName) !== -1)
+    .filter((user) => user.friends.includes(friendName) === true) /*indexOf(friendName) !== -1*/
     .map((user) => user.name);
 };
 console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
